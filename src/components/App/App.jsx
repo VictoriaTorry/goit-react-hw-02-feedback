@@ -36,7 +36,7 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
     return (
-      <>
+      <div className={css.main}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
@@ -56,7 +56,7 @@ export class App extends Component {
             <Notification message="There is no feedback"></Notification>
           )}
         </Section>
-      </>
+      </div>
     );
   }
 }
